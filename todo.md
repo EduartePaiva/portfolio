@@ -1,0 +1,1 @@
+[_] - Make a new favicon with letter E
