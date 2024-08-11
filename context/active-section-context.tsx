@@ -1,7 +1,7 @@
 "use client";
 
-import { links as linksType } from "@/lib/data";
-import {
+import type { SectionName } from "@/lib/types";
+import React, {
     createContext,
     Dispatch,
     SetStateAction,
@@ -9,39 +9,43 @@ import {
     useState,
 } from "react";
 
-type linksType = (typeof linksType)[number]["name"];
-interface ActiveSectionContext {
-    activeSection: linksType;
-    setActiveSection: Dispatch<SetStateAction<linksType>>;
-}
+type ActivateSectionProviderProps = { children: React.ReactNode };
+type ActiveSectionContextType = {
+    activeSection: SectionName;
+    setActiveSection: Dispatch<SetStateAction<SectionName>>;
+    timeOfLastCLick: number;
+    setTimeOfLastClick: Dispatch<SetStateAction<number>>;
+};
 
-const activeSectionContext = createContext<ActiveSectionContext | null>(null);
+const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
+    null,
+);
 
 export default function ActivateSectionProvider({
     children,
-}: {
-    children: React.ReactNode;
-}) {
-    const [activeSection, setActiveSection] = useState<linksType>("Home");
+}: ActivateSectionProviderProps) {
+    const [activeSection, setActiveSection] = useState<SectionName>("Home");
+    const [timeOfLastCLick, setTimeOfLastClick] = useState(0);
     return (
-        <activeSectionContext.Provider
-            value={{ activeSection, setActiveSection }}
+        <ActiveSectionContext.Provider
+            value={{
+                activeSection,
+                setActiveSection,
+                timeOfLastCLick,
+                setTimeOfLastClick,
+            }}
         >
             {children}
-        </activeSectionContext.Provider>
+        </ActiveSectionContext.Provider>
     );
 }
 
 export function useActiveSectionContext() {
-    const context = useContext(activeSectionContext);
-    if (!context) {
-        console.error(
-            "useActiveSectionContext must be used within a ActivateSectionProvider",
-        );
+    const context = useContext(ActiveSectionContext);
+    if (context === null) {
         throw new Error(
-            "useActiveSectionContext must be used within a ActivateSectionProvider",
+            "useActiveSectionContext must be used within an ActivateSectionProvider",
         );
     }
-    const { activeSection, setActiveSection } = context;
-    return { activeSection, setActiveSection };
+    return context;
 }
