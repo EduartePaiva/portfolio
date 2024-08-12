@@ -1,14 +1,11 @@
 "use client";
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 
 import SectionHeading from "./section-heading";
 import { experiencesData } from "@/lib/data";
 import { Fragment } from "react";
 import { useActiveSectionInView } from "@/lib/hooks";
+import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
+import VerticalTimelineElement from "./VerticalTimeline/VerticalTimelineElement";
 
 export default function Experience() {
     const { ref } = useActiveSectionInView("Experience", 0.2);

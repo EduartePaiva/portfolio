@@ -1,26 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
 import { InView } from "react-intersection-observer";
-import type { VerticalTimelineElementProps } from "react-vertical-timeline-component";
-
-interface VerticalTimelineElementProps {}
+import type { VerticalTimelineElementProps } from "./VerticalTimelineTypes";
+import "./VerticalTimelineElement.css";
+import { Fragment } from "react";
 
 const VerticalTimelineElement = ({
     children = "",
     className = "",
-    contentArrowStyle = null,
-    contentStyle = null,
+    contentArrowStyle,
+    contentStyle,
     date = "",
     dateClassName = "",
     icon = null,
     iconClassName = "",
-    iconOnClick = null,
-    onTimelineElementClick = null,
-    iconStyle = null,
+    iconOnClick,
+    onTimelineElementClick,
+    iconStyle,
     id = "",
     position = "",
-    style = null,
+    style,
     textClassName = "",
     intersectionObserverProps = {
         rootMargin: "0px 0px -40px 0px",
@@ -28,7 +26,7 @@ const VerticalTimelineElement = ({
     },
     visible = false,
     shadowSize = "small", // small | medium | large
-}) => (
+}: VerticalTimelineElementProps) => (
     <InView {...intersectionObserverProps}>
         {({ inView, ref }) => (
             <div
@@ -41,7 +39,7 @@ const VerticalTimelineElement = ({
                 })}
                 style={style}
             >
-                <React.Fragment>
+                <Fragment>
                     <span // eslint-disable-line jsx-a11y/no-static-element-interactions
                         style={iconStyle}
                         onClick={iconOnClick}
@@ -83,39 +81,10 @@ const VerticalTimelineElement = ({
                             {date}
                         </span>
                     </div>
-                </React.Fragment>
+                </Fragment>
             </div>
         )}
     </InView>
 );
-
-VerticalTimelineElement.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]),
-    className: PropTypes.string,
-    contentArrowStyle: PropTypes.shape({}),
-    contentStyle: PropTypes.shape({}),
-    date: PropTypes.node,
-    dateClassName: PropTypes.string,
-    icon: PropTypes.element,
-    iconClassName: PropTypes.string,
-    iconStyle: PropTypes.shape({}),
-    iconOnClick: PropTypes.func,
-    onTimelineElementClick: PropTypes.func,
-    id: PropTypes.string,
-    position: PropTypes.string,
-    style: PropTypes.shape({}),
-    textClassName: PropTypes.string,
-    visible: PropTypes.bool,
-    shadowSize: PropTypes.string,
-    intersectionObserverProps: PropTypes.shape({
-        root: PropTypes.object,
-        rootMargin: PropTypes.string,
-        threshold: PropTypes.number,
-        triggerOnce: PropTypes.bool,
-    }),
-};
 
 export default VerticalTimelineElement;

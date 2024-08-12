@@ -31,6 +31,7 @@ export interface VerticalTimelineElementProps {
     contentStyle?: React.CSSProperties | undefined;
     contentArrowStyle?: React.CSSProperties | undefined;
     visible?: boolean | undefined;
+    shadowSize?: "small" | "medium" | "large";
 }
 
 export class VerticalTimeline extends React.Component<VerticalTimelineProps> {}
