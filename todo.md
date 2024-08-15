@@ -2,4 +2,5 @@
 [_] - Make my About me paragraph
 [_] - Switch the dummy projects for my own 
 [x] - do the finishing header behavior myself
-[_] - add toast to the contact form instead of using alert
+[x] - add toast to the contact form instead of using alert
+[_] - add my own domain to resend
