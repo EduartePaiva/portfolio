@@ -1,17 +1,10 @@
 "use client";
-import React, {
-    createContext,
-    Dispatch,
-    SetStateAction,
-    useContext,
-    useEffect,
-    useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light";
 type ThemeProviderProps = { children: React.ReactNode };
 type ThemeContextType = {
     theme: Theme;
-    setTheme: Dispatch<SetStateAction<Theme>>;
+    toggleTheme: () => void;
 };
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -31,25 +24,6 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
         }
     }, []);
 
-    return (
-        <ThemeContext.Provider
-            value={{
-                theme,
-                setTheme,
-            }}
-        >
-            {children}
-        </ThemeContext.Provider>
-    );
-}
-
-export function useThemeContext() {
-    const context = useContext(ThemeContext);
-    if (context === null) {
-        throw new Error("useThemeContext must be used within an ThemeProvider");
-    }
-    const { setTheme, theme } = context;
-
     const toggleTheme = () => {
         if (theme == "light") {
             setTheme("dark");
@@ -62,5 +36,22 @@ export function useThemeContext() {
         }
     };
 
-    return { setTheme, theme, toggleTheme };
+    return (
+        <ThemeContext.Provider
+            value={{
+                theme,
+                toggleTheme,
+            }}
+        >
+            {children}
+        </ThemeContext.Provider>
+    );
+}
+
+export function useThemeContext() {
+    const context = useContext(ThemeContext);
+    if (context === null) {
+        throw new Error("useThemeContext must be used within an ThemeProvider");
+    }
+    return context;
 }
