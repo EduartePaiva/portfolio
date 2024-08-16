@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import clsx from "clsx";
 import { InView } from "react-intersection-observer";
 import type { VerticalTimelineElementProps } from "./VerticalTimelineTypes";
 import "./VerticalTimelineElement.css";
@@ -32,7 +32,7 @@ const VerticalTimelineElement = ({
             <div
                 ref={ref}
                 id={id}
-                className={classNames(className, "vertical-timeline-element", {
+                className={clsx(className, "vertical-timeline-element", {
                     "vertical-timeline-element--left": position === "left",
                     "vertical-timeline-element--right": position === "right",
                     "vertical-timeline-element--no-children": children === "",
@@ -43,7 +43,7 @@ const VerticalTimelineElement = ({
                     <span // eslint-disable-line jsx-a11y/no-static-element-interactions
                         style={iconStyle}
                         onClick={iconOnClick}
-                        className={classNames(
+                        className={clsx(
                             iconClassName,
                             "vertical-timeline-element-icon",
                             `shadow-size-${shadowSize}`, // for shadow size
@@ -58,7 +58,7 @@ const VerticalTimelineElement = ({
                     <div
                         style={contentStyle}
                         onClick={onTimelineElementClick}
-                        className={classNames(
+                        className={clsx(
                             textClassName,
                             "vertical-timeline-element-content",
                             {
@@ -73,7 +73,7 @@ const VerticalTimelineElement = ({
                         />
                         {children}
                         <span
-                            className={classNames(
+                            className={clsx(
                                 dateClassName,
                                 "vertical-timeline-element-date",
                             )}

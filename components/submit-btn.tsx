@@ -1,4 +1,4 @@
-import { FaPaperPlane, FaSpinner } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
 import { useFormStatus } from "react-dom";
 
 export default function SubmitBtn() {

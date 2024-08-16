@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import { useActiveSectionInView } from "@/lib/hooks";
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import VerticalTimelineElement from "./VerticalTimeline/VerticalTimelineElement";
+import clsx from "clsx";
 
 export default function Experience() {
     const { ref } = useActiveSectionInView("Experience", 0.4);

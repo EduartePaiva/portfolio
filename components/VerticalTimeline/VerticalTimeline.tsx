@@ -1,6 +1,6 @@
-import classNames from "classnames";
 import type { VerticalTimelineProps } from "./VerticalTimelineTypes";
 import "./VerticalTimeline.css";
+import clsx from "clsx";
 
 const VerticalTimeline = ({
     animate = true,
@@ -14,7 +14,7 @@ const VerticalTimeline = ({
     }
     return (
         <div
-            className={classNames(className, "vertical-timeline", {
+            className={clsx(className, "vertical-timeline", {
                 "vertical-timeline--animate": animate,
                 "vertical-timeline--two-columns": layout === "2-columns",
                 "vertical-timeline--one-column-left":
