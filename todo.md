@@ -4,3 +4,4 @@
 [x] - do the finishing header behavior myself
 [x] - add toast to the contact form instead of using alert
 [_] - add my own domain to resend
+[_] - start making language work and fix middleware
