@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeProvider from "@/context/theme-context";
 import LangSwitch from "@/components/lang-switch";
+import { langType } from "@/middleware";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
+    params: { lang },
 }: Readonly<{
     children: React.ReactNode;
+    params: { lang: langType };
 }>) {
     return (
-        <html lang="en" className="!scroll-smooth">
+        <html lang={lang} className="!scroll-smooth">
             <body
                 className={`
                         ${inter.className}
@@ -47,7 +50,7 @@ export default function RootLayout({
                     <Footer />
                     <Toaster position="top-right" />
                     <ThemeSwitch />
-                    <LangSwitch />
+                    <LangSwitch lang={lang} />
                 </ThemeProvider>
             </body>
         </html>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Negotiator from "negotiator";
 
 const LOCALES = ["pt", "en"];
+export type langType = "pt" | "en";
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest) {
