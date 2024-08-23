@@ -46,11 +46,11 @@ export default function RootLayout({
                     <ActivateSectionProvider>
                         <Header />
                         {children}
+                        <LangSwitch lang={lang} />
                     </ActivateSectionProvider>
                     <Footer />
                     <Toaster position="top-right" />
                     <ThemeSwitch />
-                    <LangSwitch lang={lang} />
                 </ThemeProvider>
             </body>
         </html>
