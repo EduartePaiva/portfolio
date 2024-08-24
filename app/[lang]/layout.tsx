@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     title: "Eduarte | Portfolio",
     description:
         "Eduarte é um desenvolvedor full-stack com 2 anos de experiência.",
+    icons: {
+        icon: "/images/favicon.ico",
+    },
 };
 
 export default function RootLayout({
