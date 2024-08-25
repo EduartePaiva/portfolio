@@ -6,5 +6,5 @@ const en = {
         lang: "en",
         "flag-icon": { name: "English", flag: flagEn },
     },
-};
+} as const;
 export default en;

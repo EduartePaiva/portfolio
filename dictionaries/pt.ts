@@ -6,6 +6,6 @@ const pt = {
         lang: "pt",
         "flag-icon": { name: "Português", flag: ptFlag },
     },
-};
+} as const;
 
 export default pt;

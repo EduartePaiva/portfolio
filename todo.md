@@ -6,3 +6,4 @@
 [_] - add my own domain to resend
 [x] - start making language work and fix middleware
 [_] - make the entire dictionary for the app.
+[_] - The theme switch should have a tooltip too

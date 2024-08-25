@@ -6,7 +6,6 @@ import { Fragment } from "react";
 import { useActiveSectionInView } from "@/lib/hooks";
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import VerticalTimelineElement from "./VerticalTimeline/VerticalTimelineElement";
-import clsx from "clsx";
 import { useThemeContext } from "@/context/theme-context";
 
 export default function Experience() {
