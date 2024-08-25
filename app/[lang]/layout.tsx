@@ -8,7 +8,8 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeProvider from "@/context/theme-context";
 import LangSwitch from "@/components/lang-switch";
-import { langType } from "@/middleware";
+import { type Locale } from "@/i18n-config";
+import { getDictionary } from "@/get-dictionary";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +27,9 @@ export default function RootLayout({
     params: { lang },
 }: Readonly<{
     children: React.ReactNode;
-    params: { lang: langType };
+    params: { lang: Locale };
 }>) {
+    const dictionary = getDictionary(lang);
     return (
         <html lang={lang} className="!scroll-smooth">
             <body
@@ -49,7 +51,7 @@ export default function RootLayout({
                     <ActivateSectionProvider>
                         <Header />
                         {children}
-                        <LangSwitch lang={lang} />
+                        <LangSwitch dictionary={dictionary["lang-switch"]} />
                     </ActivateSectionProvider>
                     <Footer />
                     <Toaster position="top-right" />

@@ -5,8 +5,13 @@ import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
+import { Locale } from "@/i18n-config";
 
-export default function Home() {
+export default function Home({
+    params: { lang },
+}: {
+    params: { lang: Locale };
+}) {
     return (
         <main className="flex flex-col items-center px-4">
             <Intro />

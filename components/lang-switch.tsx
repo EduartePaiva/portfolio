@@ -1,9 +1,6 @@
 "use client";
 
-import { langType } from "@/middleware";
 import Image from "next/image";
-import en from "@/public/en.png";
-import pt from "@/public/pt.png";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useRouter } from "next/navigation";
 import {
@@ -12,13 +9,13 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "./ui/tooltip";
+import { type dictionaryType } from "@/get-dictionary";
 
-const flagIcons = {
-    en: { name: "English", flag: en },
-    pt: { name: "Português", flag: pt },
-} as const;
-
-export default function LangSwitch({ lang }: { lang: langType }) {
+export default function LangSwitch({
+    dictionary,
+}: {
+    dictionary: dictionaryType["lang-switch"];
+}) {
     const { activeSection } = useActiveSectionContext();
     const route = useRouter();
 
@@ -29,20 +26,26 @@ export default function LangSwitch({ lang }: { lang: langType }) {
                     <button
                         className="fixed bottom-20 right-5 bg-white dark:bg-gray-950 w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-110 transition-all"
                         onClick={() => {
-                            route.push(
-                                "/pt#" + activeSection.toLocaleLowerCase(),
-                            );
+                            if (dictionary.lang === "en") {
+                                route.push(
+                                    "/pt#" + activeSection.toLocaleLowerCase(),
+                                );
+                            } else {
+                                route.push(
+                                    "/en#" + activeSection.toLocaleLowerCase(),
+                                );
+                            }
                         }}
                     >
                         <Image
-                            src={flagIcons[lang].flag}
+                            src={dictionary["flag-icon"].flag}
                             width={20}
-                            alt={flagIcons[lang].name}
+                            alt={dictionary["flag-icon"].name}
                         />
                     </button>
                 </TooltipTrigger>
                 <TooltipContent>
-                    <p>Switch to {lang === "en" ? "Português" : "English"}</p>
+                    <p>{dictionary["tooltip-text"]}</p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
