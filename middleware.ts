@@ -42,7 +42,7 @@ export const config = {
          * - _next/image (image optimization files)
          * - images directory in /public (public static images)
          */
-        "/((?!api|_next/static|_next/image|images).*)",
+        "/((?!api|_next/static|_next/image|files).*)",
         // Optional: only run on root (/) URL
         // "/",
     ],

@@ -6,15 +6,17 @@ import Skills from "@/components/skills";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
 import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/get-dictionary";
 
 export default function Home({
     params: { lang },
 }: {
     params: { lang: Locale };
 }) {
+    const dictionary = getDictionary(lang);
     return (
         <main className="flex flex-col items-center px-4">
-            <Intro />
+            <Intro dictionary={dictionary.intro} />
             <SectionDivider />
             <About />
             <Projects />

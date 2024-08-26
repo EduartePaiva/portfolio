@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
         "Eduarte é um desenvolvedor full-stack com 2 anos de experiência.",
     icons: {
-        icon: "/images/favicon.ico",
+        icon: "/files/favicon.ico",
     },
 };
 

@@ -9,8 +9,13 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useActiveSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { dictionaryType } from "@/get-dictionary";
 
-export default function Intro() {
+export default function Intro({
+    dictionary,
+}: {
+    dictionary: dictionaryType["intro"];
+}) {
     const { ref } = useActiveSectionInView("Home");
     const { setTimeOfLastClick, setActiveSection } = useActiveSectionContext();
     return (
@@ -57,14 +62,7 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
             >
-                <span className="font-bold">Hello I&apos;m Eduarte</span>{" "}
-                I&apos;m a&nbsp;
-                <span className="font-bold">
-                    full stack developer
-                </span> with <span className="font-bold">2 years</span> of
-                experience. I enjoy building{" "}
-                <span className="italic">sites & apps</span>. My focus is{" "}
-                <span className="underline">React (Next.js)</span>.
+                {dictionary.presentation}
             </motion.h1>
 
             <motion.div
@@ -81,15 +79,15 @@ export default function Intro() {
                     href="#contact"
                     className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
                 >
-                    Contact me here
+                    {dictionary.contactBtn}
                     <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </Link>
                 <a
-                    href="/resume_en.pdf"
+                    href={dictionary.resumeLink}
                     download
                     className="group bg-white dark:bg-white/10 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
                 >
-                    Download CV
+                    {dictionary.downloadBtn}
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
                 </a>
                 <a

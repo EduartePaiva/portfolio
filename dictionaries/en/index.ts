@@ -1,4 +1,5 @@
 import flagEn from "@/public/en.png";
+import intro from "./intro";
 
 const en = {
     "lang-switch": {
@@ -6,5 +7,6 @@ const en = {
         lang: "en",
         "flag-icon": { name: "English", flag: flagEn },
     },
+    intro: intro,
 } as const;
 export default en;
