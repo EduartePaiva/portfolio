@@ -4,7 +4,7 @@ import Presentation from "./presentation";
 const intro = {
     presentation: React.createElement(Presentation),
     contactBtn: "Contacte-me aqui",
-    downloadBtn: "Baixar Currículo",
+    downloadBtn: "Baixar currículo",
     resumeLink: "/files/resume_pt_br.pdf",
 } as const;
 

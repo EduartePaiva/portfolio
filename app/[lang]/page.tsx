@@ -18,7 +18,7 @@ export default function Home({
         <main className="flex flex-col items-center px-4">
             <Intro dictionary={dictionary.intro} />
             <SectionDivider />
-            <About />
+            <About dictionary={dictionary.about} />
             <Projects />
             <Skills />
             <Experience />
