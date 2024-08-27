@@ -55,7 +55,7 @@ export default function RootLayout({
                     </ActivateSectionProvider>
                     <Footer />
                     <Toaster position="top-right" />
-                    <ThemeSwitch />
+                    <ThemeSwitch dictionary={dictionary.themeSwitch} />
                 </ThemeProvider>
             </body>
         </html>

@@ -10,5 +10,6 @@ const en = {
     },
     intro: intro,
     about: about,
+    themeSwitch: { light: "Change to dark mode", dark: "Change to light mode" },
 } as const;
 export default en;

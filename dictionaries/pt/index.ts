@@ -10,6 +10,10 @@ const pt = {
     },
     intro: intro,
     about: about,
+    themeSwitch: {
+        light: "Mude para modo escuro",
+        dark: "Mude para modo claro",
+    },
 } as const;
 
 export default pt;
