@@ -3,6 +3,7 @@ import intro from "./intro";
 import about from "./about";
 
 const en = {
+    header: ["Home", "About", "Projects", "Skills", "Experience", "Contact"],
     "lang-switch": {
         "tooltip-text": "Switch to Portuguese",
         lang: "en",

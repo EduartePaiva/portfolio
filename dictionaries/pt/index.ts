@@ -3,6 +3,14 @@ import intro from "./intro";
 import about from "../en/about";
 
 const pt = {
+    header: [
+        "Início",
+        "Sobre",
+        "Projetos",
+        "Habilidades",
+        "Experiência",
+        "Contato",
+    ],
     "lang-switch": {
         "tooltip-text": "Mude para Inglês",
         lang: "pt",
