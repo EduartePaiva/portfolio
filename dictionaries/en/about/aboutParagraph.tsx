@@ -1,7 +1,7 @@
 export default function AboutParagraph() {
     return (
         <div>
-            <p className="mb-3">
+            {/* <p className="mb-3">
                 After graduating with a degree in{" "}
                 <span className="font-medium">Accounting</span>, I decided to
                 pursue my passion for programming. I enrolled in a coding
@@ -27,6 +27,28 @@ export default function AboutParagraph() {
                 currently learning about{" "}
                 <span className="font-medium">history and philosophy</span>.
                 I&apos;m also learning how to play the guitar.
+            </p> */}
+            <p className="mb-3">
+                Since I was young I have always liked technology, I have always
+                been curious to know how computers and software were made.
+                Because of that, I chose a career with a focus on technology. I
+                finished college in Systems Analysis and Development, graduating
+                as a technologist. I continue to study programming daily with a
+                focus on web development.
+            </p>
+            <p className="mb-3">
+                What I like most about programming is the challenge of solving
+                problems. I love the feeling of being immersed in solving a
+                complex problem for hours. My main stack is React, Nextjs, Node,
+                Express, but I am not limited only to the javascript ecosystem,
+                I like other languages such as Rust, Python, Golang, I have an
+                AWS account where I test various cloud technologies.
+            </p>
+            <p className="">
+                When I&apos;m not coding, I like to play video games, watch
+                geopolitical news, go to the gym, and read books in English. I
+                am interested in books on human nature, personal enhancement,
+                and biographies.
             </p>
         </div>
     );

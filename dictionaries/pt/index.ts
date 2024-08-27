@@ -1,6 +1,6 @@
 import ptFlag from "@/public/pt.png";
 import intro from "./intro";
-import about from "../en/about";
+import about from "./about";
 
 const pt = {
     header: [

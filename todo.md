@@ -1,5 +1,6 @@
 [x] - Make a new favicon with letter E
-[_] - Make my About me paragraph
+[x] - Make my About me paragraph.
+[_] - beautify the about me section.
 [_] - Switch the dummy projects for my own 
 [x] - do the finishing header behavior myself
 [x] - add toast to the contact form instead of using alert
