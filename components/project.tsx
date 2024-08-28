@@ -1,11 +1,11 @@
 "use client";
 
-import { projectsData } from "@/lib/data";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { type dictionaryType } from "@/get-dictionary";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = dictionaryType["projects"]["projectsData"][number];
 
 export default function Project({
     description,

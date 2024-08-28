@@ -19,7 +19,7 @@ export default function Home({
             <Intro dictionary={dictionary.intro} />
             <SectionDivider />
             <About dictionary={dictionary.about} />
-            <Projects />
+            <Projects dictionary={dictionary.projects} />
             <Skills />
             <Experience />
             <Contact />

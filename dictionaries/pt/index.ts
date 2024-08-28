@@ -1,6 +1,7 @@
 import ptFlag from "@/public/pt.png";
 import intro from "./intro";
 import about from "./about";
+import { projectsData } from "./projectsData";
 
 const pt = {
     header: [
@@ -21,6 +22,10 @@ const pt = {
     themeSwitch: {
         light: "Mude para modo escuro",
         dark: "Mude para modo claro",
+    },
+    projects: {
+        projectsData,
+        header: "meus projetos",
     },
 } as const;
 
