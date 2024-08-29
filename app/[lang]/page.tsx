@@ -20,9 +20,9 @@ export default function Home({
             <SectionDivider />
             <About dictionary={dictionary.about} />
             <Projects dictionary={dictionary.projects} />
-            <Skills />
-            <Experience />
-            <Contact />
+            <Skills dictionary={dictionary.skills} />
+            <Experience dictionary={dictionary.experience} />
+            <Contact dictionary={dictionary.contact} />
         </main>
     );
 }

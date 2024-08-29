@@ -1,7 +1,7 @@
 import { FaPaperPlane } from "react-icons/fa";
 import { useFormStatus } from "react-dom";
 
-export default function SubmitBtn() {
+export default function SubmitBtn({ text }: { text: string }) {
     const { pending } = useFormStatus();
     return (
         <button
@@ -22,7 +22,7 @@ export default function SubmitBtn() {
                 <div className="h-5 w-5 animate-spin rounded-full border-2 border-white" />
             ) : (
                 <>
-                    Submit{" "}
+                    {text}{" "}
                     <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </>
             )}

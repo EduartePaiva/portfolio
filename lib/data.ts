@@ -4,7 +4,6 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
     {
@@ -101,21 +100,28 @@ export const projectsData = [
 export const skillsData = [
     "HTML",
     "CSS",
+    "Tailwind",
+    "Git",
     "JavaScript",
     "TypeScript",
+    "SQL",
+    "PostgreSQL",
     "React",
     "Next.js",
     "Node.js",
-    "Git",
-    "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
     "Express",
-    "PostgreSQL",
-    "Python",
-    "Django",
+    "Socket.io",
+    "Prisma",
+    "Drizzle ORM",
     "Framer Motion",
+    "Jwt",
+    "Clerk",
+    "AWS",
+    "Ec2",
+    "S3",
+    "Aws Lambda",
+    "Nginx",
+    "Python",
+    "Rust",
+    "Golang",
 ] as const;

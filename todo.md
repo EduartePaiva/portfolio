@@ -4,12 +4,12 @@
 [x] - add toast to the contact form instead of using alert
 [x] - start making language work and fix middleware
 [x] - The theme switch should have a tooltip too
+[x] - Switch the dummy projects for my own 
+[x] - update skill section
+[x] - make the entire dictionary for the app.
+[x] - translate the description to portuguese.
 [_] - beautify the about me section.
-[_] - Switch the dummy projects for my own 
 [_] - add my own domain to resend
-[_] - make the entire dictionary for the app.
 [_] - when I click on a specific project it'll go to the project homepage.
 [_] - update the projects image.
-[_] - translate the description to portuguese.
-[_] - update skill section
 [_] - update experience section

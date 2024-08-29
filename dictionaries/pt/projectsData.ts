@@ -4,7 +4,7 @@ export const projectsData = [
     {
         title: "Webhook Tester",
         description:
-            "A webapp that facilitates developers to easily test their webhooks before deploying the application.",
+            "Um webapp que permite desenvolvedores testarem seus webhooks localmente sem a necessidade de realizar um deploy.",
         tags: [
             "React",
             "Tailwind",
@@ -21,7 +21,7 @@ export const projectsData = [
     {
         title: "Galeria de Imagem",
         description:
-            "Allow users to upload a gallery of images, It have capabilities like image cropping, and resizing.",
+            "Permite usuários salvar uma galeria de imagens. O app possui capacidades como recorte de imagens e redimensionamento",
         tags: [
             "Next.JS",
             "TypeScript",

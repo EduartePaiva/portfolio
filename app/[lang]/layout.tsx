@@ -53,7 +53,7 @@ export default function RootLayout({
                         {children}
                         <LangSwitch dictionary={dictionary["lang-switch"]} />
                     </ActivateSectionProvider>
-                    <Footer />
+                    <Footer dictionary={dictionary.footer} />
                     <Toaster position="top-right" />
                     <ThemeSwitch dictionary={dictionary.themeSwitch} />
                 </ThemeProvider>

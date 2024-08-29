@@ -4,6 +4,7 @@ import { skillsData } from "@/lib/data";
 import SectionHeading from "./section-heading";
 import { useActiveSectionInView } from "@/lib/hooks";
 import { motion, type Variants } from "framer-motion";
+import { dictionaryType } from "@/get-dictionary";
 
 const fadeInAnimationVariants: Variants = {
     initial: {
@@ -17,7 +18,11 @@ const fadeInAnimationVariants: Variants = {
     }),
 };
 
-export default function Skills() {
+export default function Skills({
+    dictionary,
+}: {
+    dictionary: dictionaryType["skills"];
+}) {
     const { ref } = useActiveSectionInView("Skills", 0.8);
     return (
         <section
@@ -25,7 +30,7 @@ export default function Skills() {
             ref={ref}
             className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
         >
-            <SectionHeading>My skills</SectionHeading>
+            <SectionHeading>{dictionary}</SectionHeading>
             <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
                 {skillsData.map((skill, index) => (
                     <motion.li

@@ -7,8 +7,13 @@ import { useActiveSectionInView } from "@/lib/hooks";
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
 import VerticalTimelineElement from "./VerticalTimeline/VerticalTimelineElement";
 import { useThemeContext } from "@/context/theme-context";
+import { dictionaryType } from "@/get-dictionary";
 
-export default function Experience() {
+export default function Experience({
+    dictionary,
+}: {
+    dictionary: dictionaryType["experience"];
+}) {
     const { ref } = useActiveSectionInView("Experience", 0.4);
     const { theme } = useThemeContext();
 
@@ -18,7 +23,7 @@ export default function Experience() {
             id="experience"
             className="scroll-mt-28 mb-28 sm:mb-40"
         >
-            <SectionHeading>My experience</SectionHeading>
+            <SectionHeading>{dictionary.header}</SectionHeading>
             <VerticalTimeline lineColor="">
                 {experiencesData.map((item, index) => (
                     <Fragment key={index}>
