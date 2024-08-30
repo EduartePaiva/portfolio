@@ -17,6 +17,7 @@ export const projectsData = [
             "Nginx",
         ],
         imageUrl: corpcommentImg,
+        projectLink: "https://webhook.eduartepaiva.com",
     },
     {
         title: "Galeria de Imagem",
@@ -35,5 +36,6 @@ export const projectsData = [
             "lambda function",
         ],
         imageUrl: rmtdevImg,
+        projectLink: "https://gallery.eduartepaiva.com",
     },
 ] as const;

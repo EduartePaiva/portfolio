@@ -8,8 +8,9 @@
 [x] - update skill section
 [x] - make the entire dictionary for the app.
 [x] - translate the description to portuguese.
+[x] - add my own domain to resend.
+[x] - when I click on a specific project it'll go to the project homepage.
 [_] - beautify the about me section.
-[_] - add my own domain to resend
-[_] - when I click on a specific project it'll go to the project homepage.
 [_] - update the projects image.
-[_] - update experience section
+[_] - update experience section.
+[_] - add dreampicai to projects.

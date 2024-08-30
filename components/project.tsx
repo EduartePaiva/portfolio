@@ -12,8 +12,9 @@ export default function Project({
     imageUrl,
     tags,
     title,
+    projectLink,
 }: ProjectProps) {
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLAnchorElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["0 1", "1.33 1"],
@@ -22,10 +23,12 @@ export default function Project({
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
     return (
-        <motion.div
+        <motion.a
+            href={projectLink}
+            target="_blank"
             style={{ scale: scaleProgress, opacity: opacityProgress }}
             ref={ref}
-            className="group mb-3 sm:mb-8 last:mb-0"
+            className="block group mb-3 sm:mb-8 last:mb-0 cursor-pointer"
         >
             <section className=" bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:group-even:pl-8 hover:bg-gray-200 rounded-lg transition dark:bg-white/10 dark:hover:bg-white/20">
                 <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] sm:h-[20rem] flex flex-col h-full sm:group-even:ml-[18rem]">
@@ -63,6 +66,6 @@ export default function Project({
                     quality={95}
                 />
             </section>
-        </motion.div>
+        </motion.a>
     );
 }

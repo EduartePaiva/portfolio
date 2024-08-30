@@ -23,7 +23,7 @@ export async function sendEmail(form: FormData) {
     let data;
     try {
         data = await resend.emails.send({
-            from: "Contact Form <onboarding@resend.dev>",
+            from: "Contact Form <portfolio@eduartepaiva.com>",
             to: ["eduarte2018.po@gmail.com"],
             reply_to: senderEmail as string,
             subject: "Message from contact form",
