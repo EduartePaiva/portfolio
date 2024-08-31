@@ -1,7 +1,6 @@
 "use client";
 
 import SectionHeading from "./section-heading";
-import { experiencesData } from "@/lib/data";
 import { Fragment } from "react";
 import { useActiveSectionInView } from "@/lib/hooks";
 import VerticalTimeline from "./VerticalTimeline/VerticalTimeline";
@@ -25,7 +24,7 @@ export default function Experience({
         >
             <SectionHeading>{dictionary.header}</SectionHeading>
             <VerticalTimeline lineColor="">
-                {experiencesData.map((item, index) => (
+                {dictionary.experiencesData.map((item, index) => (
                     <Fragment key={index}>
                         <VerticalTimelineElement
                             contentStyle={{
