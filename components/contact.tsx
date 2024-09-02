@@ -27,7 +27,7 @@ export default function Contact({
             <p className="text-gray-700 -mt-6 dark:text-white/80">
                 {dictionary.textBeforeEmail}{" "}
                 <a className="underline" href="mailto:eduarte2018.po@gmail.com">
-                    eduarte2018.po@gmail.com
+                    eduarteoliveira2021@gmail.com
                 </a>{" "}
                 {dictionary.textAfterEmail}
             </p>
