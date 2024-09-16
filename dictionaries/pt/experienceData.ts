@@ -7,23 +7,23 @@ export const experiencesData = [
         title: "Graduei em análise e desenvolvimento de sistemas",
         location: "Brazil, BA",
         description:
-            "Eu aprendi sobre ciência da computação, banco de dados, inglês, ciência de dados, pedrões de projetos, programação e muitas outras coisas.",
+            "Aprendi sobre ciência da computação, banco de dados, inglês, ciência de dados, pedrões de projetos, programação e muitas outras coisas.",
         icon: React.createElement(LuGraduationCap),
         date: "2023",
     },
     {
-        title: "Deep dive in Web Developer",
+        title: "Mergulho profundo em desenvolvimento web",
         location: "",
         description:
-            "For this period I kept refining my web development skills, I learned the fundamentals of Javascript, Typescript, Git, Github. Learned frameworks like react, vue, angular, Nextjs, and the javascript ecosystem in general.",
+            "Neste período eu eu foquei em refinar minhas skills em desenvolvimento web. Eu aprendi os fundamentos do Javascript, Typescript, Git, Github. Aprendi frameworks como o React, Vue, Angular, Nextjs e o ecossistema do javascript de uma forma geral.",
         icon: React.createElement(RiJavascriptLine),
         date: "2023 - 2024",
     },
     {
-        title: "Backend languages and Infrastructure",
+        title: "Linguagens backend e infraestrutura",
         location: "",
         description:
-            "For this period I'm studying the infrastructure side of things, I build the Image Gallery where I used AWS services like S3 bucket for storing images and a Lambda Function for processing uploaded images, I deployed the Webhook Tester project on a Ec2 AWS instance where I setup a Nginx proxy to enable TLS and to host a node server on the /api route alongside with an react SPA on the root / route. I learned others languages like Python, Rust and Golang",
+            'Neste período estou estudando a infraestrutura por trás de uma aplicação web. Eu construí o projeto Galeria de Imagens, onde utilizei serviços da AWS como S3 bucket para salvar imagens e Lambda Function para realizar o processamento de imagens, Meu segundo projeto Webhook Tester, realizei o deploy em uma instância Ec2 na AWS, utilizei o web server Nginx como um proxy para habilitar TLS na aplicação, também realizei um "deploy duplo" utilizando o Nginx onde um backend em nodeJS está hospedado no caminho /api e um react SPA na rota root /. Neste período também estou explorando outras linguagens como o Python, Rust e Golang.',
         icon: React.createElement(FaAws),
         date: "2024 - present",
     },
