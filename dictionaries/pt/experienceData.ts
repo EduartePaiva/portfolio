@@ -1,31 +1,30 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-
+import { RiJavascriptLine } from "react-icons/ri";
+import { FaAws } from "react-icons/fa";
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Graduei em análise e desenvolvimento de sistemas",
+        location: "Brazil, BA",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Eu aprendi sobre ciência da computação, banco de dados, inglês, ciência de dados, pedrões de projetos, programação e muitas outras coisas.",
         icon: React.createElement(LuGraduationCap),
         date: "2023",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        title: "Deep dive in Web Developer",
+        location: "",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+            "For this period I kept refining my web development skills, I learned the fundamentals of Javascript, Typescript, Git, Github. Learned frameworks like react, vue, angular, Nextjs, and the javascript ecosystem in general.",
+        icon: React.createElement(RiJavascriptLine),
+        date: "2023 - 2024",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "Backend languages and Infrastructure",
+        location: "",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
+            "For this period I'm studying the infrastructure side of things, I build the Image Gallery where I used AWS services like S3 bucket for storing images and a Lambda Function for processing uploaded images, I deployed the Webhook Tester project on a Ec2 AWS instance where I setup a Nginx proxy to enable TLS and to host a node server on the /api route alongside with an react SPA on the root / route. I learned others languages like Python, Rust and Golang",
+        icon: React.createElement(FaAws),
+        date: "2024 - present",
     },
 ] as const;

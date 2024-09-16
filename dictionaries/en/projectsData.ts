@@ -6,7 +6,7 @@ export const projectsData = [
     {
         title: "Webhook Tester",
         description:
-            "Um webapp que permite desenvolvedores testarem seus webhooks localmente sem a necessidade de realizar um deploy.",
+            "A webapp that facilitates developers to easily test their webhooks before deploying the application.",
         tags: [
             "React",
             "Tailwind",
@@ -22,9 +22,9 @@ export const projectsData = [
         projectLink: "https://webhook.eduartepaiva.com",
     },
     {
-        title: "Galeria de Imagem",
+        title: "Image Gallery",
         description:
-            "Permite usuários salvar uma galeria de imagens. O app possui capacidades como recorte de imagens e redimensionamento",
+            "Allow users to upload a gallery of images, It have capabilities like image cropping, and resizing.",
         tags: [
             "Next.JS",
             "TypeScript",
@@ -38,7 +38,6 @@ export const projectsData = [
             "lambda function",
         ],
         imageUrl: { dark: galleryDarkImg, light: galleryLightImg },
-
         projectLink: "https://gallery.eduartepaiva.com",
     },
 ] as const;

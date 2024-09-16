@@ -2,8 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
+import webhookImg from "@/public/webhook-tester.png";
 
 export const links = [
     {
@@ -56,46 +56,6 @@ export const experiencesData = [
             "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
         icon: React.createElement(FaReact),
         date: "2021 - present",
-    },
-] as const;
-
-export const projectsData = [
-    {
-        title: "Webhook Tester",
-        description:
-            "A webapp that facilitates developers to easily test their webhooks before deploying the application.",
-        tags: [
-            "React",
-            "Tailwind",
-            "Express",
-            "Postgres",
-            "Drizzle ORM",
-            "jwt",
-            "socket io",
-            "ec2",
-            "Nginx",
-        ],
-        imageUrl: corpcommentImg,
-        projectLink: "https://webhook.eduartepaiva.com",
-    },
-    {
-        title: "Image Gallery",
-        description:
-            "Allow users to upload a gallery of images, It have capabilities like image cropping, and resizing.",
-        tags: [
-            "Next.JS",
-            "TypeScript",
-            "rust",
-            "Tailwind",
-            "React",
-            "Drizzle orm",
-            "clerk",
-            "aws",
-            "s3",
-            "lambda function",
-        ],
-        imageUrl: rmtdevImg,
-        projectLink: "https://gallery.eduartepaiva.com",
     },
 ] as const;
 

@@ -4,6 +4,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { type dictionaryType } from "@/get-dictionary";
+import { useThemeContext } from "@/context/theme-context";
 
 type ProjectProps = dictionaryType["projects"]["projectsData"][number];
 
@@ -14,6 +15,7 @@ export default function Project({
     title,
     projectLink,
 }: ProjectProps) {
+    const { theme } = useThemeContext();
     const ref = useRef<HTMLAnchorElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -61,7 +63,7 @@ export default function Project({
                         group-even:right-[initial] 
                         group-even:-left-40 
                     "
-                    src={imageUrl}
+                    src={imageUrl[theme]}
                     alt="Project I worked on"
                     quality={95}
                 />

@@ -1,7 +1,7 @@
 import flagEn from "@/public/en.png";
 import intro from "./intro";
 import about from "./about";
-import { projectsData } from "@/lib/data";
+import { projectsData } from "./projectsData";
 import { experiencesData } from "./experienceData";
 
 const en = {
