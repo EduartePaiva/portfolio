@@ -11,6 +11,7 @@
 [x] - add my own domain to resend.
 [x] - when I click on a specific project it'll go to the project homepage.
 [_] - beautify the about me section.
-[_] - update the projects image.
-[_] - update experience section.
+[x] - update the projects image.
+[x] - update experience section.
 [_] - add dreampicai to projects.
+[_] - translate resume to english.
