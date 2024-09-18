@@ -10,6 +10,7 @@ import ThemeProvider from "@/context/theme-context";
 import LangSwitch from "@/components/lang-switch";
 import { type Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +52,7 @@ export default function RootLayout({
                     <ActivateSectionProvider>
                         <Header dictionary={dictionary.header} />
                         {children}
+                        <Analytics />
                         <LangSwitch dictionary={dictionary["lang-switch"]} />
                     </ActivateSectionProvider>
                     <Footer dictionary={dictionary.footer} />
