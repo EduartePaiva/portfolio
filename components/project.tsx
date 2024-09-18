@@ -65,7 +65,8 @@ export default function Project({
                     "
                     src={imageUrl[theme]}
                     alt="Project I worked on"
-                    quality={95}
+                    quality={80}
+                    width={500}
                 />
             </section>
         </motion.a>
