@@ -8,11 +8,17 @@ import Contact from "@/components/contact";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 
-export default function Home({
-    params: { lang },
-}: {
-    params: { lang: Locale };
-}) {
+export default async function Home(
+    props: {
+        params: Promise<{ lang: Locale }>;
+    }
+) {
+    const params = await props.params;
+
+    const {
+        lang
+    } = params;
+
     const dictionary = getDictionary(lang);
     return (
         <main className="flex flex-col items-center px-4">

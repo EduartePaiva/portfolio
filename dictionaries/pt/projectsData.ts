@@ -19,7 +19,7 @@ export const projectsData = [
             "Nginx",
         ],
         imageUrl: { dark: webhookImg, light: webhookImg },
-        projectLink: "https://webhook.eduartepaiva.com",
+        projectLink: "https://github.com/EduartePaiva/webhook-tester",
     },
     {
         title: "Galeria de Imagem",
@@ -39,6 +39,6 @@ export const projectsData = [
         ],
         imageUrl: { dark: galleryDarkImg, light: galleryLightImg },
 
-        projectLink: "https://gallery.eduartepaiva.com",
+        projectLink: "https://github.com/EduartePaiva/image-uploader-galery",
     },
 ] as const;
