@@ -91,7 +91,7 @@ export default function Intro({
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
                 </a>
                 <a
-                    href="https://www.linkedin.com/in/eduarte-paiva-a40728266/"
+                    href="https://www.linkedin.com/in/eduarte-paiva"
                     target="_blank"
                     className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] focus:text-gray-950 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/80"
                 >

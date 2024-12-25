@@ -23,13 +23,18 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
-    children,
-    params: { lang },
-}: Readonly<{
-    children: React.ReactNode;
-    params: { lang: Locale };
-}>) {
+export default async function RootLayout(
+    props: Readonly<{
+        children: React.ReactNode;
+        params: Promise<{ lang: Locale }>;
+    }>,
+) {
+    const params = await props.params;
+
+    const { lang } = params;
+
+    const { children } = props;
+
     const dictionary = getDictionary(lang);
     return (
         <html lang={lang} className="!scroll-smooth">
