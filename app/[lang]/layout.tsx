@@ -26,18 +26,14 @@ export const metadata: Metadata = {
 export default async function RootLayout(
     props: Readonly<{
         children: React.ReactNode;
-        params: { lang: Locale };
-    }>
+        params: Promise<{ lang: Locale }>;
+    }>,
 ) {
     const params = await props.params;
 
-    const {
-        lang
-    } = params;
+    const { lang } = params;
 
-    const {
-        children
-    } = props;
+    const { children } = props;
 
     const dictionary = getDictionary(lang);
     return (
