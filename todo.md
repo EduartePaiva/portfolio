@@ -14,4 +14,5 @@
 [x] - update the projects image.
 [x] - update experience section.
 [_] - add dreampicai to projects.
-[_] - translate resume to english.
+[x] - translate resume to english.
+[_] - update the resume, the portuguese and english versions.
