@@ -2,6 +2,7 @@ import webhookImg from "@/public/webhook-tester.png";
 import galleryDarkImg from "@/public/img-gallery-dark.png";
 import galleryLightImg from "@/public/img-gallery-light.png";
 import maxOauthImg from "@/public/max-oauth.png";
+import notionCloneImg from "@/public/notion-clone.png";
 
 export const projectsData = [
     {
@@ -59,5 +60,23 @@ export const projectsData = [
         imageUrl: { dark: maxOauthImg, light: maxOauthImg },
 
         projectLink: "https://github.com/EduartePaiva/max-oauth2-services-in-one-app-nextjs",
+    },
+    {
+        title: "Ai Notion Clone",
+        description:
+            "Um clone do notion com funcionalidades de IA e compartilhamento de documentos",
+        tags: [
+            "Next.JS",
+            "React",
+            "LiveBlocks",
+            "Open AI",
+            "Clerk",
+            "Cloudflare Workers",
+            "Hono",
+            "PostgreSQL",
+            "React Query",
+        ],
+        imageUrl: { dark: notionCloneImg, light: notionCloneImg },
+        projectLink: "https://github.com/EduartePaiva/ai-notion-clone",
     },
 ] as const;
