@@ -1,6 +1,7 @@
 import webhookImg from "@/public/webhook-tester.png";
 import galleryDarkImg from "@/public/img-gallery-dark.png";
 import galleryLightImg from "@/public/img-gallery-light.png";
+import maxOauthImg from "@/public/max-oauth.png";
 
 export const projectsData = [
     {
@@ -40,5 +41,23 @@ export const projectsData = [
         imageUrl: { dark: galleryDarkImg, light: galleryLightImg },
 
         projectLink: "https://github.com/EduartePaiva/image-uploader-galery",
+    },
+    {
+        title: "Max OAuth",
+        description:
+            "Implementação de 10 provedores OAuth 2.0 diferentes",
+        tags: [
+            "Next.JS",
+            "React",
+            "TypeScript",
+            "Tailwind",
+            "PostgreSQL",
+            "Drizzle ORM",
+            "Lucia Auth",
+            "OAuth 2.0",
+        ],
+        imageUrl: { dark: maxOauthImg, light: maxOauthImg },
+
+        projectLink: "https://github.com/EduartePaiva/max-oauth2-services-in-one-app-nextjs",
     },
 ] as const;
