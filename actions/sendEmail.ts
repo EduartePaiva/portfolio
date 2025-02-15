@@ -1,7 +1,7 @@
 "use server";
 
 import { getErrorMessage, validateString } from "@/lib/utils";
-import { Resend } from "resend";
+import { type CreateEmailResponse, Resend } from "resend";
 import { createElement } from "react";
 import ContactFormEmail from "@/email/contact-form-email";
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -20,10 +20,10 @@ export async function sendEmail(form: FormData) {
             error: "invalid sender email",
         };
     }
-    let data;
+    let data: CreateEmailResponse;
     try {
         data = await resend.emails.send({
-            from: "Contact Form <portfolio@eduartepaiva.com>",
+            from: "Contact Form <portfolio@eduarte.pro>",
             to: ["eduarteoliveira2021@gmail.com"],
             replyTo: senderEmail as string,
             subject: "Message from contact form",
