@@ -5,7 +5,7 @@ const intro = {
     presentation: React.createElement(Presentation),
     contactBtn: "Contact me here",
     downloadBtn: "Download CV",
-    resumeLink: "/files/resume_en.pdf",
+    resumeLink: "/files/resume.pdf",
 } as const;
 
 export default intro;
